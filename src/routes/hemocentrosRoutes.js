@@ -9,8 +9,8 @@ router.use('/:nome', (req, res, next) => {
 
 router.get('/', controller.getInfo);
 router.get('/todos', controller.getAll);
+router.post('/todos', controller.postHemocentro);
 router.get('/localidade/:cidade', controller.getCidade);
-router.post('todos', controller.postHemocentro);
 router.put('/:nome', controller.updateHemocentro);
 router.delete('/:nome', controller.deleteHemocentro);
 
