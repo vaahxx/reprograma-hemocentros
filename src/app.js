@@ -25,6 +25,6 @@ app.use(bodyParser.json());
 
 // rotas
 const hemocentros = require('./routes/hemocentrosRoutes');
-app.use('/hemocentros', hemocentros);
+//app.use('/hemocentros', hemocentros)
 
 module.exports = app;
