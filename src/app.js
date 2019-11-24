@@ -8,7 +8,9 @@ const app = express();
 // String de conexão com o mongodb
 // porta padrão do mongo: 27017
 // banco de dados utilizado: reprograma-hemocentros
-mongoose.connect('mongodb://admin:admin@reprograma-valentina-4dsq6.mongodb.net/',  { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://admin:admin@reprograma-valentina-4dsq6.mongodb.net/test', (err) => {
+  if (err) console.log(err);
+});
 //mongoose.connect('mongodb://localhost:27017/reprograma-hemocentros',  { useNewUrlParser: true });
 
 // representação da conexão com o banco de dados 
