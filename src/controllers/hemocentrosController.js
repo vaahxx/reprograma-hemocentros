@@ -28,14 +28,17 @@ exports.getCidade = (req, res, next) => {
     });
 };
 exports.updateHemocentro = (req, res, next) => {
-    Model.update(
+    Model.findOneAndUpdate( 
         { nome: req.nome },
         { $set: req.body },
-        { upsert: true },
-        (err) => {
+        { upsert: false },
+        (err, hemocentro) => {
             if (err) return res.status(500).send(err);
+
+            if (!hemocentro) return res.status(200).send({ mensagem: "infelizmente não localizamos o posto de coleta para atualizar" });
+            
+            return res.status(200).send({ mensagem: "Posto de coleta atualizado com sucesso!" });
         });    
-        res.status(200).send({ mensagem: "Posto de coleta atualizado com sucesso!" });
 };
 exports.deleteHemocentro = (req, res, next) => {
     Model.findOne({ "nome": req.nome }, function (err, hemocentro) {

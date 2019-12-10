@@ -11,7 +11,8 @@ const app = express();
 mongoose.connect('mongodb+srv://admin:admin@reprograma-valentina-4dsq6.mongodb.net/test', {
   useNewUrlParser: true, 
   useUnifiedTopology: true,
-  useCreateIndex: true
+  useCreateIndex: true,
+  useFindAndModify: false 
 })
   .then(() => console.log('conectado ao MongoDB Atlas!'))
   .catch((err) => console.log(`erro de conexão ${err}`));
