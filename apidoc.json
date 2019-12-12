@@ -1,0 +1,9 @@
+{
+    "name": "Documentação API de Hemocentros - Reprograma + Meli",
+    "version": "1.0.0",
+    "description": "API de Hemocentros",
+    "template": {
+      "forceLanguage": "en"
+    }
+}
+  

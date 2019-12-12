@@ -28,11 +28,18 @@ mongoose.connect('mongodb+srv://admin:admin@reprograma-valentina-4dsq6.mongodb.n
 // });
 
 // middlewares
+app.use(express.static('public'));
 app.use(cors());
 app.use(bodyParser.json());
 
 // rotas
 const hemocentros = require('./routes/hemocentrosRoutes');
 app.use('/hemocentros', hemocentros)
+
+// apiDoc
+app.use(express.static('public'));
+app.get('/api-doc', (req, res) => {
+  res.sendFile(path.join(__dirname + '/../doc/index.html'));
+});
 
 module.exports = app;

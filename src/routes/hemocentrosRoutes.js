@@ -7,6 +7,14 @@ router.use('/:nome', (req, res, next) => {
     next();
 });
 
+/**
+ * @api {get} /hemocentros Retorna a lista de hemocentros
+ * @apiName ListarHemocentros
+ * @apiGroup Hemocentros
+ *
+ * @apiSuccess {String} Retorna a lista de hemocentros.
+ */
+
 router.get('/', controller.getInfo);
 router.get('/todos', controller.getAll);
 router.post('/todos', controller.postHemocentro);
