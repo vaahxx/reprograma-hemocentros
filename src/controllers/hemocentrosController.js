@@ -48,7 +48,7 @@ exports.deleteHemocentro = (req, res, next) => {
 
         hemocentro.remove(function (err) {
             if (!err) {
-                res.status(200).send({ message: 'Hemocentro removido com sucesso.' });
+                res.status(200).send({ mensagem: 'Hemocentro removido com sucesso.' });
             }
         })
     })

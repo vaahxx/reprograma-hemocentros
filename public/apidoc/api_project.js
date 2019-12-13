@@ -1,7 +1,7 @@
 define({
-  "name": "Documentação API de Hemocentros - Reprograma + Meli",
+  "name": "API de Hemocentros - Reprograma + Meli",
   "version": "1.0.0",
-  "description": "API de Hemocentros",
+  "description": "Documentação",
   "template": {
     "forceLanguage": "en"
   },
@@ -10,7 +10,7 @@ define({
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2019-12-13T16:54:08.059Z",
+    "time": "2019-12-13T18:54:50.112Z",
     "url": "http://apidocjs.com",
     "version": "0.19.0"
   }
