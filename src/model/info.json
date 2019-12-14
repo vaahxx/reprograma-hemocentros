@@ -1,0 +1,19 @@
+{
+    "quem pode ser doador de sangue": [],
+    "quem não pode ser doador": [
+        "diabéticos", "menores de 16 anos", "maiores de 69 anos", "pessoas pesando menos de 50kg", "portadores de doenças infecciosas transmissíveis pelo sangue", "anemicos", "hipertensos ou hipotensos", "usuários de drogas ilícitas injetáveis", "lactantes"
+    ],
+    "cuidados pós-doação de sangue": [],
+
+    "informações adicionais": [
+        "Cada doação de sangue pode salvar até 4 vidas",
+        "Não há risco de contrair doenças com a doação",
+        "Não há como substituir o sangue, então a doação é a única saída",
+        "O organismo repõe rapidamente o sangue doado",
+        "Doar sangue não muda a densidade e características de seu sangue",
+        "A doação de sangue não engorda ou emagrece",
+        "Todo o processo é totalmente sigiloso",
+        "Ajudar outras pessoas faz bem para todos, incluindo você",
+        "No dia 14 de junho, é celebrado o 'Dia Mundial do Doador de Sangue' e, juntamente com a data, diversos hospitais e órgãos de saúde lançam a campanha Junho Vermelho, para incentivar a doação."
+    ]
+}

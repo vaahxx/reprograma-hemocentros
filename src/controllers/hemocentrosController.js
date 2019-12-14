@@ -1,4 +1,5 @@
 const Model = require('../model/hemocentrosModel');
+const info = require('../model/info.json')
 
 exports.postHemocentro = (req, res, next) => {
     const hemocentro = new Model(req.body);
@@ -11,9 +12,11 @@ exports.postHemocentro = (req, res, next) => {
     });
 };
 exports.getInfo = (req, res, next) => {
-    return res.status(200).send({
-        mensagem: 'quem pode doar e quem nao pode doar?'
-    });
+    return res.status(200).send(info
+    //     {
+    //     mensagem: 'quem pode doar e quem nao pode doar?'
+    // }
+    );
 };
 exports.getAll = (req, res, next) => {
     Model.find((err, hemocentros) => {
