@@ -2,13 +2,13 @@ const mongoose = require('mongoose');
 var { Point } = require('mongoose-geojson-schemas');
 const Schema = mongoose.Schema;
 
-// Schema de clientes
+// Schema de hemocentros
 // instancia um novo schema, que representa o objeto cliente - utilizado no model
 const HemocentrosSchema = new Schema({
     nome: {type: String, required: true},
     endereco: {type: String},
     cidade: {type: String},
-    localizacao: Point,
+    localizacao: {Point, isAsync: false},
     horarioAtendimento: {type: String},
     totalSangue: {type: Number}
 }, 

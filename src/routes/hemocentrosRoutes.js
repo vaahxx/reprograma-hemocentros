@@ -60,6 +60,10 @@ router.get('/', controller.getInfo);
  */
 router.post('/todos', controller.postHemocentro);
 
+
+router.get('/localidade/maisproximo', controller.getNearest);
+
+
 /**
  * @api {get} /hemocentros/localidade:cidade
  * @apiGroup Hemocentros
@@ -112,5 +116,9 @@ router.put('/:nome', controller.updateHemocentro);
  *
  */
 router.delete('/:nome', controller.deleteHemocentro);
+
+
+
+
 
 module.exports = router;

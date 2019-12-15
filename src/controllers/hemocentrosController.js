@@ -40,7 +40,7 @@ exports.updateHemocentro = (req, res, next) => {
         });    
 };
 exports.deleteHemocentro = (req, res, next) => {
-    Model.findOne({ "nome": req.nome }, function (err, hemocentro) {
+    Model.findOne({ "nome": req.nome }, (err, hemocentro) => {
         if (err) res.status(500).send(err);
 
         if (!hemocentro) return res.status(200).send({ mensagem: "infelizmente não localizamos o posto de coleta para remover" });
@@ -51,4 +51,20 @@ exports.deleteHemocentro = (req, res, next) => {
             }
         })
     })
+};
+exports.getNearest = async (req, res) => {
+    req.userCoordinates = req.body.localizacao;
+    await Model.findOne({
+        "localizacao": {
+            $near: {
+                $geometry: {
+                    type: "Point",
+                    coordinates: req.userCoordinates
+                }
+            }
+        }
+    }, (err, hemocentro) => {
+        if (err) res.status(500).send(err); 
+        res.status(200).send(hemocentro);
+    });
 };
