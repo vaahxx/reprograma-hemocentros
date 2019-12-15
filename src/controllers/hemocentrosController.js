@@ -12,11 +12,7 @@ exports.postHemocentro = (req, res, next) => {
     });
 };
 exports.getInfo = (req, res, next) => {
-    return res.status(200).send(info
-    //     {
-    //     mensagem: 'quem pode doar e quem nao pode doar?'
-    // }
-    );
+    return res.status(200).send(info);
 };
 exports.getAll = (req, res, next) => {
     Model.find((err, hemocentros) => {

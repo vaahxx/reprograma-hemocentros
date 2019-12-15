@@ -24,7 +24,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "geolib": "^3.1.0",
-    "mongoose": "^5.7.12"
+    "mongoose": "^5.7.12",
+    "mongoose-geojson-schema": "^2.1.5",
+    "mongoose-geojson-schemas": "^0.10.18"
   },
   "devDependencies": {
     "nodemon": "^2.0.1"
