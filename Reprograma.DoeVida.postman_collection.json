@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "f6a417ca-4262-4660-8f13-11ca047caf6b",
+		"name": "Reprograma.DoeVida",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "getApiDoc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/apidoc",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apidoc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInfo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/hemocentros",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hemocentros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/hemocentros/todos",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hemocentros",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getNearest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"localizacao\": [\n        -46.87596,\n        -23.51152\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/hemocentros/localidade/maisproximo",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hemocentros",
+								"localidade",
+								"maisproximo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByCity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/hemocentros/localidade/São Paulo",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hemocentros",
+								"localidade",
+								"São Paulo"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "postHemocentro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Banco de Sangue - Unidade Einstein Morumbi 2\",\n    \"endereco\": \"Avenida Albert Einstein, 627, 3º andar\",\n    \"cidade\": \"São Paulo\",\n\t  \"localizacao\": {\n\t\t\t\"type\": \"Point\",\n\t\t\t\"coordinates\": [-46.715440,-23.599300]\n\t\t},\n    \"horarioAtendimento\": \"8h às 21h\",\n    \"totalSangue\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/hemocentros/todos",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hemocentros",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "putHemocentro",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"_id\": \"5df3ddb2bdc1987f8791aa53\",\n        \"nome\": \"Unimed Leste Paulista\",\n        \"endereco\": \"Rua João Rabelo Junqueira, 12\",\n        \"cidade\": \"São João da Boa Vista\",\n        \"horarioAtendimento\": \"6h30 às 10h\",\n        \"totalSangue\": 42,\n        \"localizacao\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -46.79347,\n                -21.98243\n            ]\n        }\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/hemocentros/Unimed Leste Paulista",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hemocentros",
+								"Unimed Leste Paulista"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "deleteHemocentro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/hemocentros/Unimed Leste Paulista",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hemocentros",
+								"Unimed Leste Paulista"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
