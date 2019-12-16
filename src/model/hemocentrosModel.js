@@ -8,7 +8,7 @@ const HemocentrosSchema = new Schema({
     nome: {type: String, required: true},
     endereco: {type: String},
     cidade: {type: String},
-    localizacao: {Point, isAsync: false},
+    localizacao: Point,
     horarioAtendimento: {type: String},
     totalSangue: {type: Number}
 }, 

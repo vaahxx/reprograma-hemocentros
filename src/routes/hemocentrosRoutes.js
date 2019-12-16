@@ -16,14 +16,38 @@ router.use('/:nome', (req, res, next) => {
  * 
  * @apiSuccessExample {json} Success-Response:
  *    HTTP/1.1 200 OK
- *  [{
-    "_id": "5ddb15d5aba7f004139b9f84",
-    "nome": "Hospital do ABC",
-    "endereco": "Avenida São João de Meriti 174",
-    "cidade": "São Paulo",
-    "horarioAtendimento": "9h às 17h",
-    "totalSangue": 120
- *  },...]
+   [
+      {
+      "_id": "5df3ddb2bdc1987f8791aa53",
+      "nome": "Unimed Leste Paulista",
+      "endereco": "Rua João Rabelo Junqueira, 12",
+      "cidade": "São João da Boa Vista",
+      "horarioAtendimento": "6h30 às 10h",
+      "totalSangue": 42,
+      "localizacao": {
+         "type": "Point",
+         "coordinates": [
+         -46.79347,
+         -21.98243
+         ]
+      }
+   },
+   {
+      "_id": "5df6547f2ea1c1400f2cf27b",
+      "nome": "Fundação Pró-Sangue Barueri",
+      "endereco": "Rua Ângela Mirella, 354",
+      "cidade": "Barueri",
+      "localizacao": {
+         "type": "Point",
+         "coordinates": [
+         -46.8728181,
+         -23.4966131
+         ]
+      },
+      "horarioAtendimento": "8h às 16h",
+      "totalSangue": 98
+      },...
+   ]
  *
  */
 router.get('/todos', controller.getAll);
@@ -106,6 +130,7 @@ router.get('/localidade/maisproximo', controller.getNearest);
 
 /**
  * @api {get} /hemocentros/localidade:cidade
+ * @apiParam {String} cidade Nome da cidade desejada
  * @apiGroup Hemocentros
  * @apiName GetCidade
  * *
@@ -113,20 +138,46 @@ router.get('/localidade/maisproximo', controller.getNearest);
  *
  * @apiSuccessExample {json} Success-Response:
  *    HTTP/1.1 200 OK
- *  [{
-    "_id": "5ddb15d5aba7f004139b9f84",
-    "nome": "Hospital do ABC",
-    "endereco": "Avenida São João de Meriti 174",
-    "cidade": "São Paulo",
-    "horarioAtendimento": "9h às 17h",
-    "totalSangue": 120
- *  },...]
+   [
+      {
+         "_id": "5df77d6b8d0cf616077f970b",
+         "nome": "Posto Dante Pazzanese",
+         "endereco": "Av. Dr. Dante Pazzanese, 500",
+         "cidade": "São Paulo",
+         "localizacao": {
+            "type": "Point",
+            "coordinates": [
+            -46.65228,
+            -23.58551
+            ]
+         },
+         "horarioAtendimento": "8h às 13h",
+         "totalSangue": 74
+      },
+      {
+         "_id": "5df780108d0cf616077f970c",
+         "nome": "Posto Clínicas",
+         "endereco": "Av. Dr. Enéas Carvalho de Aguiar, 155, 1º andar",
+         "cidade": "São Paulo",
+         "localizacao": {
+            "type": "Point",
+            "coordinates": [
+            -46.6681,
+            -23.55743
+            ]
+         },
+         "horarioAtendimento": "7h às 18h",
+         "totalSangue": 180
+      },...
+   ]
+
  *
  */
 router.get('/localidade/:cidade', controller.getCidade);
 
 /**
  * @api {put} /hemocentros/:nome
+ * @apiParam {String} nome Nome único do posto de coleta
  * @apiName updateHemocentro
  * @apiGroup Hemocentros
  * *
@@ -143,6 +194,7 @@ router.put('/:nome', controller.updateHemocentro);
 
 /**
  * @api {delete} /hemocentros/:nome
+ * @apiParam {String} nome Nome único do posto de coleta
  * @apiName deleteHemocentro
  * @apiGroup Hemocentros
  * *
