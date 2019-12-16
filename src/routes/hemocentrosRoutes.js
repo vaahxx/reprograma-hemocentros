@@ -37,8 +37,23 @@ router.get('/todos', controller.getAll);
  *
  * @apiSuccessExample {json} Success-Response:
  *    HTTP/1.1 200 OK
- *  [{
- *  }]
+   {
+      "cuidados pós-doação de sangue": {
+         "imediatamente após doar": [
+            "permanecer sentado por 15 minutos para evitar fraqueza, tontura e sensação de desmaio",
+            "aceitar o lanche e bebida oferecidos"
+         ],
+         "primeiras 4 horas": [
+            "aumentar a ingestão hídrica é muito importante para repor o volume de sangue doado",
+            "não retirar o curativo",
+            "não fumar"
+         ],
+         "até 12 horas": [
+            "não fazer exercício físico extenuante",
+            "não ingerir bebidas alcoólicas"
+         ]
+      }
+   }
  *
  */
 router.get('/', controller.getInfo);
@@ -60,7 +75,32 @@ router.get('/', controller.getInfo);
  */
 router.post('/todos', controller.postHemocentro);
 
-
+/**
+ * @api {get} /hemocentros/localidade/maisproximo
+ * @apiName GetNearest
+ * @apiGroup Hemocentros
+ * *
+ * @apiSuccess {Object} hemocentro Hemocentro mais próximo do usuário
+ *
+ * @apiSuccessExample {json} Success-Response:
+ *    HTTP/1.1 200 OK
+ * {
+   "_id": "5df6547f2ea1c1400f2cf27b",
+   "nome": "Fundação Pró-Sangue Barueri",
+   "endereco": "Rua Ângela Mirella, 354",
+   "cidade": "Barueri",
+   "localizacao": {
+      "type": "Point",
+      "coordinates": [
+         -46.8728181,
+         -23.4966131
+      ]
+   },
+   "horarioAtendimento": "8h às 16h",
+   "totalSangue": 98
+ * }
+ *
+ */
 router.get('/localidade/maisproximo', controller.getNearest);
 
 

@@ -1,10 +1,41 @@
 {
-    "quem pode ser doador de sangue": [],
+    "preparativos para doar sangue": {
+        "alimentacao": [
+            "estar alimentado",
+            "evitar alimentos gordurosos nas 4 horas antecedentes à doação"
+        ],
+        "documentos aceitos": [
+            "Carteira de Identidade",
+            "Cartão de Identidade de Profissional Liberal",
+            "Carteira de Trabalho e Previdência Social"
+        ]
+    },
     "quem não pode ser doador": [
-        "diabéticos", "menores de 16 anos", "maiores de 69 anos", "pessoas pesando menos de 50kg", "portadores de doenças infecciosas transmissíveis pelo sangue", "anemicos", "hipertensos ou hipotensos", "usuários de drogas ilícitas injetáveis", "lactantes"
+        "diabéticos",
+        "menores de 16 anos",
+        "maiores de 69 anos",
+        "pessoas pesando menos de 50kg",
+        "portadores de doenças infecciosas transmissíveis pelo sangue",
+        "anêmicos",
+        "hipertensos ou hipotensos",
+        "usuários de drogas ilícitas injetáveis",
+        "lactantes"
     ],
-    "cuidados pós-doação de sangue": [],
-
+    "cuidados pós-doação de sangue": {
+        "imediatamente após doar": [
+            "permanecer sentado por 15 minutos para evitar fraqueza, tontura e sensação de desmaio",
+            "aceitar o lanche e bebida oferecidos"
+        ],
+        "primeiras 4 horas": [
+            "aumentar a ingestão hídrica é muito importante para repor o volume de sangue doado",
+            "não retirar o curativo",
+            "não fumar"
+        ],
+        "até 12 horas": [
+            "não fazer exercício físico extenuante",
+            "não ingerir bebidas alcoólicas"
+        ]
+    },
     "informações adicionais": [
         "Cada doação de sangue pode salvar até 4 vidas",
         "Não há risco de contrair doenças com a doação",
@@ -12,6 +43,7 @@
         "O organismo repõe rapidamente o sangue doado",
         "Doar sangue não muda a densidade e características de seu sangue",
         "A doação de sangue não engorda ou emagrece",
+        "É recomendado que homens doem sangue até 4x por ano e as mulheres até 3x",
         "Todo o processo é totalmente sigiloso",
         "Ajudar outras pessoas faz bem para todos, incluindo você",
         "No dia 14 de junho, é celebrado o 'Dia Mundial do Doador de Sangue' e, juntamente com a data, diversos hospitais e órgãos de saúde lançam a campanha Junho Vermelho, para incentivar a doação."
