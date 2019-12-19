@@ -6,7 +6,7 @@ Este projeto tem como objetivo incentivar a doação de sangue por meio de infor
 
 ```
 DOCUMENTAÇÃO
-localhost:5000/apidoc
+https://reprograma-doevida.herokuapp.com/apidoc/
 ```
 
 ### Download + Instalação
@@ -27,6 +27,8 @@ npm start
 2 - Importe o arquivo postman_collection.json
 
 3 - A collection do projeto será importada com todas as rotas prontas 
+
+4 - Além do localhost, também pode ser usado a [URL de deploy](https://reprograma-doevida.herokuapp.com/hemocentros) 
 
 
 ## Tecnologias Usadas
