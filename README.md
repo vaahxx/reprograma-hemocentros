@@ -26,7 +26,7 @@ npm start
 
 2 - Importe o arquivo postman_collection.json
 
-3 - A collection do projeto será importada com todas as rotas prontas 
+3 - A collection do projeto será importada com todas as rotas e seus corpos de requisição prontos
 
 4 - Além do localhost, também pode ser usado a [URL de deploy](https://reprograma-doevida.herokuapp.com/hemocentros) 
 
